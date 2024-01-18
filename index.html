@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .titulo-bienvenida {
+       font-size: 1.3rem;
+       font-weight: bold;
+       line-height: 1.2;
+       color: #6F1FF3;
+       opacity: 0.8;
+       font-family: 'Nunito Sans', sans-serif !important;
+       margin-bottom: 0.5rem;
+       position: relative;
+       overflow: hidden; /* Oculta el subrayado que se desplaza inicialmente */
+   }
+   
+   .titulo-bienvenida::after {
+       content: '';
+       position: absolute;
+       left: 0;
+       bottom: 0;
+       width: 0; /* Inicialmente sin ancho */
+       height: 2px; /* Altura del subrayado */
+       background-color: #6F1FF3; /* Color del subrayado */
+       animation: fadeInWidth 3s forwards; /* Animación al cargar la página */
+   }
+   
+   @keyframes fadeInWidth {
+       to {
+           width: 100%; /* Ancho completo al final de la animación */
+       }
+   }
+   
+   </style>
+<body>
+
+
+     <h2 class="titulo-bienvenida">Soy un titulo subrayado con animación: Wow.</h2>
+</body>
+</html>
